@@ -3,13 +3,11 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import globalStyles from "../../styles/globalStyles";
 
 const HeroBanner = props => {
-  const { heading, subHeading, image } = props;
+  const { heading, subHeading, image, imageContainerStyles } = props;
   return (
-    <View style={styles.heroBannerContainer}>
+    <View style={{ ...imageContainerStyles, position: "relative" }}>
       <Image
-        source={{
-          uri: "https://cdn.stocksnap.io/img-thumbs/960w/MNUAXNCKD8.jpg"
-        }}
+        source={{ uri: image.source }}
         style={{
           width: image.width,
           height: image.height,
@@ -25,9 +23,6 @@ const HeroBanner = props => {
 };
 
 const styles = StyleSheet.create({
-  heroBannerContainer: {
-    position: "relative"
-  },
   textContainer: {
     position: "absolute",
     backgroundColor: "rgba(0, 0, 0, 0.6)",

@@ -16,7 +16,6 @@ export const appConstants = {
 const globalStyles = {
   appContainer: {
     flex: 1,
-    marginTop: 50,
     padding: appConstants.spacer
   },
   heading1: {
@@ -24,7 +23,7 @@ const globalStyles = {
   },
   heading3: {
     fontSize: appConstants.h3,
-    marginBottom: 10
+    marginBottom: 5
   }
 };
 
